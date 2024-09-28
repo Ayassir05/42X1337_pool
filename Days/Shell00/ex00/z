@@ -1,0 +1,6 @@
+touch z   //create a file z
+vim z
+Z
+
+//another way to do that
+echo "Z" > z 
