@@ -1,8 +1,8 @@
 touch z   //create a file z
 vim z     //vim is powerful test editor
-Z + Enter key for new line 
+Z + Enter key for newline 
 
 //another way to do that
 echo "Z" > z 
 //used to display text or variables 
-//new line by default
+//newline by default
