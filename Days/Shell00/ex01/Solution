@@ -19,5 +19,5 @@ tar -cf testShell00.tar testShell00
 
 //after that you can remove testShell00 cause if you it you can got it with this command : tar -tf testShell00.tar
 //tar: This is the command to create an archive.
--c: This option tells tar to create a new archive.
--f: This option specifies the file name of the archive you are creating (in this case ,testShell00)
+//-c: This option tells tar to create a new archive.
+//-f: This option specifies the file name of the archive you are creating (in this case ,testShell00)
