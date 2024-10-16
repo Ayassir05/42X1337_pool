@@ -1,4 +1,4 @@
-touch z   //create a file z
+touch z   //create a file z 
 vim z     //vim is powerful test editor
 Z + Enter key for newline 
 
