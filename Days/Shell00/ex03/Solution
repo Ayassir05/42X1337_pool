@@ -1,4 +1,4 @@
-//Firstly , we'll create two directories & three files.
+**//Firstly , we'll create two directories & three files.**
 
 mkdir test{0,2}
 touch test{1,3,4}
@@ -10,6 +10,26 @@ touch test{1,3,4}
 
 ln test3 test5
 ln -s test0 test6
-//Following the creation of the files and directories, it's necessary to modify the timestamps (date & time) for each file/directory.
+//Following the creation of the files and directories, it's necessary to modify the files size in bytes.
 
-touch -ct 06012047 test0
+echo -n "2002" > test1
+echo -n "1" > test3
+echo -n "11" > test4
+echo -n "20056" > test6
+//After modifying the files size , it's time to edit the timestamps (time & date) for each file/directory.
+
+touch -t 06012047 test0
+touch -t 06012146 test1
+touch -t 06012245 test2
+touch -t 06012344 test3
+touch -t 06012343 test4
+touch -h -t 06012220 test6
+//After that, we'll edit permissions.
+
+chmod 715 test0
+chmod 714 test1
+chmod 504 test2
+chmod 404 test3
+chmod 641 test4
+
+//Finally, the last step & command for this exercise is : tar -cf exo2.tar * , the
