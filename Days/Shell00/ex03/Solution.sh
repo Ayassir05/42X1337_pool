@@ -1,46 +1,40 @@
-"//Firstly , we'll create two directories & three files."
+touch id_rsa_pub
+"For generate ssh key we use the next command"
+ssh-keygen
 
-mkdir test{0,2}
-touch test{1,3,4}
-"//in the exercise you see test5 & test6 which i'm not creating yet , cause its not a normal (files/directories).
-//test6 is Soft link point to test0 directory.
-//test5 is Hard link point to test3 file.
-//Soft Link (Symbolic Link): A pointer or shortcut to the original file or directory. If the original file is deleted, the soft link becomes broken and inaccessible.
-//Hard Link: A direct reference to the physical data on the disk. Both the hard link and the original file share the same data, so if the original is deleted, the hard link still provides access to the data."
+"After that , we take a copy from ssh public key and save it on id_rsa_pub"
+Difference Between Public Key and Private Key:
+* Public Key:
 
-ln test3 test5
-ln -s test0 test6
-"//Following the creation of the files and directories, it's necessary to modify the files size in bytes."
+'+++ Shared openly with others.
++++ Used to encrypt data or verify a signature.
++++ In SSH, it is placed on the server you want to access.'
+* Private Key:
 
-echo -n "2002" > test1
-echo -n "1" > test3
-echo -n "11" > test4
-echo -n "20056" > test6
-"//After modifying the files size , it's time to edit the timestamps (time & date) for each file/directory."
+'+++ Kept secret and stored securely.
++++ Used to decrypt data or sign data.
++++ In SSH, it is kept on your local machine & used for authentication.'
 
-touch -t 06012047 test0
-touch -t 06012146 test1
-touch -t 06012245 test2
-touch -t 06012344 test3
-touch -t 06012343 test4
-touch -h -t 06012220 test6
-"//After that, we'll edit permissions."
+Usage:
+* Public Key:
+'+++ Placed on the server you want to access (in ~/.ssh/authorized_keys).
++++ Others can use it to encrypt messages that only your private key can decrypt.'
 
-chmod 715 test0
-chmod 714 test1
-chmod 504 test2
-chmod 404 test3
-chmod 641 test4
+* Private Key:
+'+++ Stored securely on your local machine.
++++ Used to decrypt or authenticate you when connecting to the server.'
 
-"//Finally, the last step & command for this exercise is : tar -cf exo2.tar * , This command takes all the files in the current directory (matched by *) and packages them into a single archive named "exo2.tar".
-tar: The command for working with tar archives (a way of packaging multiple files into a single file).
--c: Stands for "create" It tells tar to create a new archive.
--f: Specifies the name of the archive file to be created (in this case, exo2.tar).
-exo2.tar: The name of the resulting tar archive file.
-*: A wildcard that matches all files in the current directory."
+SSH (Secure Shell):
+'+++ A protocol for securely connecting to remote systems over a network.
++++ It encrypts communication between the client and server, ensuring privacy and security.
++++ Used commonly for remote login, file transfer, and executing commands on a remote machine.'
 
-tar -cf exo2.tar *
-"//when we wanna extract the files & the directories and preserves their permissions we use this command :"tar -xpf exo2.tar".
--x: Extracts files from the archive.
--p: Preserves file permissions exactly as they are stored in the archive. Without this option, extracted files may have their permissions changed to match the default permissions of the extracting user.
--f: Specifies the file name of the archive(exo2.tar).
+SSH Key:
+'+++ A pair of public and private keys used for passwordless authentication in SSH connections.
++++ Replaces traditional password authentication for more secure, encrypted login.'
+
+Summary:
+'+++ Public key is for sharing, placed on servers.
++++ Private key is secret, kept on your machine.
++++ SSH is a secure protocol for remote access.
++++ SSH keys provide secure, passwordless authentication for SSH sessions.
