@@ -15,3 +15,6 @@ vim ft_magic
 string: The type, indicating you're looking for a string.
 42: The string value you're looking for at byte 42.
 Contains "42" at byte 42: A description that will be shown when the magic rule is triggered
+Why "string" is Used:
+The file command, when working with magic files, treats the data as a string by default, even when it's actually a number (e.g., "42").
+So, "42" is treated as a string of two characters ('4' and '2'), even if you mean it as a number.
