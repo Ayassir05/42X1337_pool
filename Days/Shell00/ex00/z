@@ -6,3 +6,4 @@ Z + Enter key for newline
 echo "Z" > z 
 //used to display text or variables 
 //newline by default
+
