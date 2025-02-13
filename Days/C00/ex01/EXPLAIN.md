@@ -10,9 +10,9 @@ void	ft_print_alphabet(void);
 
 * Great question! 😊
 
-* Even though x holds a character ('a', 'b', ... 'z'), it is declared as an int because:
+** Even though x holds a character ('a', 'b', ... 'z'), it is declared as an int because: **
 ```
-*C treats characters as integers
+C treats characters as integers
 
 In C, characters (char) are actually stored as ASCII values, which are integers.
 Example: 'a' is 97, 'b' is 98, etc.
