@@ -24,5 +24,5 @@ Standard practice in loops
 
 In loops that compare characters (while (x <= 'z')), using int prevents potential type mismatches or implicit conversions.
 ```
-#Conclusion
+# Conclusion
 Declaring x as int ensures safer and more predictable behavior, even though it holds a character. 🚀
