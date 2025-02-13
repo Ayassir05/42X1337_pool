@@ -6,7 +6,7 @@
 /*   By: Ayassir05 <abdelaliyassir149@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:45:52 by Ayassir05         #+#    #+#             */
-/*   Updated: 2025/02/13 17:30:42 by yassir05         ###   ########.fr       */
+/*   Updated: 2025/02/13 18:08:20 by yassir05         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -16,13 +16,13 @@ void	ft_print_comb(void)
 	int	i;
 	int	j;
 	int	k;
-	
+
 	i = '0';
 	while (i <= '7')
 	{
 		j = i + 1;
 		while (j <= '8')
-		{	
+		{
 			k = j + 1;
 			while (k <= '9')
 			{
