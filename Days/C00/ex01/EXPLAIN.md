@@ -6,11 +6,11 @@ void	ft_print_alphabet(void);
 ```
 * Files to turn in: ft_print_alphabet.c
 * Allowed funcitons: ft_putchar
-### why we give the x int data type and we know it contain character can u give me briefly explain for that?
+### **why we give the x int data type and we know it contain character can u give me briefly explain for that?**
 
 * Great question! 😊
 
-** Even though x holds a character ('a', 'b', ... 'z'), it is declared as an int because: **
+* Even though x holds a character ('a', 'b', ... 'z'), it is declared as an int because:
 ```
 C treats characters as integers
 
